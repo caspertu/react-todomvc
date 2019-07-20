@@ -42,7 +42,7 @@ export default class TodoMain extends React.Component {
 }
 
 TodoMain.propTypes = {
-  todoItems: PropTypes.object.isRequired,
+  todoItems: PropTypes.array.isRequired,
   changeTodoItem: PropTypes.func.isRequired,
   deleteTodoItem: PropTypes.func.isRequired
 }
