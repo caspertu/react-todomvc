@@ -2,50 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class TodoFooter extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      filter: 'all'
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(filter) {
-    const {showFilter} = this.props
-    this.setState({filter})
-    // console.log(`showFilter('${filter}')`)
-    showFilter(filter)
-  }
-
-
   render() {
-    const {todoCount, clearCompleted} = this.props
-    const {filter} = this.state
+    const {count, completedCount, clearCompleted, nowShowing, showFilter} = this.props
     return (
       <footer className="footer">
         <span className="todo-count">
-          <strong>{todoCount}</strong>
-          {' '}item{todoCount > 1 ? 's' : ''} left
+          
+          <strong>{nowShowing === 'completed' ? completedCount : count}</strong>
+          {' '}item{count > 1 ? 's' : ''} left
         </span>
         <ul className="filters">
           <li>
             <a 
-              className={filter === 'all' ? 'selected' : ''} 
+              className={nowShowing === 'all' ? 'selected' : ''} 
               href="#/"
-              onClick={() => this.handleClick('all')}
+              onClick={() => showFilter('all')}
             >All</a>
           </li>
           <li>
-            <a className={filter === 'active' ? 'selected' : ''} 
+            <a className={nowShowing === 'active' ? 'selected' : ''} 
               href="#/active"
-              onClick={() => this.handleClick('active')}
+              onClick={() => showFilter('active')}
             >Active</a>
           </li>
           <li>
             <a 
-              className={filter === 'completed' ? 'selected' : ''}
+              className={nowShowing === 'completed' ? 'selected' : ''}
               href="#/completed"
-              onClick={() => this.handleClick('completed')}
+              onClick={() => showFilter('completed')}
             >Completed</a>
           </li>
         </ul>
@@ -61,7 +45,7 @@ class TodoFooter extends React.Component {
 }
 
 TodoFooter.propTypes = {
-  todoCount: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
   showFilter: PropTypes.func.isRequired,
   clearCompleted: PropTypes.func.isRequired
 }

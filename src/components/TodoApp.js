@@ -10,7 +10,7 @@ export default class TodoApp extends React.Component {
     this.id = 1
     this.state = {
       todoItems: [],
-      filter: 'all',
+      nowShowing: 'all',
     }
     this.addTodo = this.addTodo.bind(this)
     this.changeTodoItem = this.changeTodoItem.bind(this)
@@ -51,12 +51,11 @@ export default class TodoApp extends React.Component {
     })
   }
 
-  showFilter(filter) {
-    this.setState({filter})
+  showFilter(nowShowing) {
+    this.setState({nowShowing})
   }
 
   clearCompleted() {
-    console.log(`clearCompleted`)
     const {todoItems} = this.state
     this.setState({
       todoItems: todoItems.filter(item => !item.completed)
@@ -64,12 +63,10 @@ export default class TodoApp extends React.Component {
   }
 
   render() {
-    const {todoItems, filter} = this.state
+    const {todoItems, nowShowing} = this.state
 
-    const todoCount = todoItems.reduce((prev, curr) => curr.completed ? prev : prev + 1, 0)
-    
     const shownTodos = todoItems.filter(item => {
-      switch (filter) {
+      switch (nowShowing) {
         case 'active':
           return !item.completed
         case 'completed':
@@ -79,6 +76,9 @@ export default class TodoApp extends React.Component {
           return true
       }
     })
+
+    const activeTodoCount = todoItems.reduce((prev, curr) => curr.completed ? prev : prev + 1, 0)
+    const completedCount = todoItems.length - activeTodoCount
 
     return (
       <section className="todoapp">
@@ -90,8 +90,10 @@ export default class TodoApp extends React.Component {
           changeTodoItem={this.changeTodoItem}
           deleteTodoItem={this.deleteTodoItem}
         />
-        <TodoFooter 
-          todoCount={todoCount}
+        <TodoFooter
+          count={activeTodoCount}
+          completedCount={completedCount}
+          nowShowing={nowShowing}
           showFilter={this.showFilter}
           clearCompleted={this.clearCompleted}
         />
