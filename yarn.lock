@@ -7846,7 +7846,7 @@ react-dev-utils@^9.0.1:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@16.8.6:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
@@ -7860,6 +7860,11 @@ react-error-overlay@^5.1.6:
   version "5.1.6"
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha1-DNc0B8XRQfljiuHgxj57K/fpkp0=
+
+react-flip-move@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/react-flip-move/download/react-flip-move-3.0.3.tgz#3065b0b9e622ae73953aba725f8feed8e4643667"
+  integrity sha1-MGWwueYirnOVOrpyX4/u2ORkNmc=
 
 react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.6"
@@ -7926,7 +7931,7 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
-react@16.8.6:
+react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.npm.taobao.org/react/download/react-16.8.6.tgz?cache=0&sync_timestamp=1563203959563&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha1-rWw6lhT9Ok6e9REX9U2IjaAfK74=
@@ -9131,6 +9136,11 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+todomvc-app-css@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/todomvc-app-css/download/todomvc-app-css-2.2.0.tgz#6f84b15d9d4e0cf186679489fb236050c822de11"
+  integrity sha1-b4SxXZ1ODPGGZ5SJ+yNgUMgi3hE=
 
 tough-cookie@^2.3.3, tough-cookie@^2.3.4, tough-cookie@^2.5.0:
   version "2.5.0"
