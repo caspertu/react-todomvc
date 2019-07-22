@@ -48,7 +48,7 @@ class TodoItem extends React.Component {
             </label>
             <button 
               className="destroy"
-              onClick={deleteTodo}
+              onClick={() => deleteTodo(todo.id)}
             />
           </div>
         </li>
@@ -61,8 +61,8 @@ class TodoItem extends React.Component {
 TodoItem.propTypes = {
   editTodo: PropTypes.func.isRequired,
   deleteTodo: PropTypes.func.isRequired,
-  completeTodo: PropTypes.bool.isRequired,
-  todo: PropTypes.string.isRequired
+  completeTodo: PropTypes.func.isRequired,
+  todo: PropTypes.object.isRequired
 }
 
 export default TodoItem
