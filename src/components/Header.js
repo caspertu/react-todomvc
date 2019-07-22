@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoTextInput from './TodoInputText'
+import TodoTextInput from './TodoTextInput'
 import PropTypes from 'prop-types'
 
 const Header = ({ addTodo }) => (

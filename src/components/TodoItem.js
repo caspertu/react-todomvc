@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import TodoInputText from './TodoInputText'
+import TodoInputText from './TodoTextInput'
 
 class TodoItem extends React.Component {
   constructor(props) {

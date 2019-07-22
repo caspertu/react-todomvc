@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-class TodoInputText extends React.Component {
+class TodoTextInput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -53,7 +53,7 @@ class TodoInputText extends React.Component {
   }
 }
 
-TodoInputText.propTypes = {
+TodoTextInput.propTypes = {
   onSave: PropTypes.func.isRequired,
   text: PropTypes.string,
   placeholder: PropTypes.string,
@@ -61,4 +61,4 @@ TodoInputText.propTypes = {
   isNewTodo: PropTypes.bool
 }
 
-export default TodoInputText
+export default TodoTextInput
