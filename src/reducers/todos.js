@@ -2,12 +2,9 @@ import {
   ADD_TODO,
   DELETE_TODO,
   EDIT_TODO,
-  TOGGLE_TODO,
   COMPLETE_TODO,
-  CLEAR_TODO,
   COMPLETE_ALL_TODOS,
   CLEAR_COMPLETED,
-  SET_VISIBILITY_FILTER,
 } from '../constants/ActionTypes'
 
 const initialState = [
