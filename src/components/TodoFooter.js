@@ -7,7 +7,6 @@ class TodoFooter extends React.Component {
     return (
       <footer className="footer">
         <span className="todo-count">
-          
           <strong>{nowShowing === 'completed' ? completedCount : count}</strong>
           {' '}item{count > 1 ? 's' : ''} left
         </span>
