@@ -8,7 +8,6 @@ class TodoItem extends React.Component {
     this.state = {
       editing: false
     }
-    this.handleDoubleClick = this.handleDoubleClick.bind(this)
   }
 
   handleDoubleClick = () => {
@@ -28,7 +27,8 @@ class TodoItem extends React.Component {
     let element
     if (editing) {
       element = (
-        <TodoInputText 
+        <TodoInputText
+          isNewTodo={false}
           text={todo.text}
           editing={editing}
           onSave={(text) => this.handleSave(todo.id, text)} />
