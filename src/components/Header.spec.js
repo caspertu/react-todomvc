@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRenderer } from 'react-test-renderer/shallow'
 import Header from './Header'
-import TodoInputText from './TodoInputText'
+import TodoTextInput from './TodoTextInput'
 
 const setup = () => {
   const props = {
@@ -29,7 +29,7 @@ describe('components', () => {
       const [h1, input] = output.props.children
       expect(h1.type).toBe('h1')
       expect(h1.props.children).toBe('todos')
-      expect(input.type).toBe(TodoInputText)
+      expect(input.type).toBe(TodoTextInput)
       expect(input.props.isNewTodo).toBe(true)
       expect(input.props.placeholder).toBe('What needs to be done?')
     })
