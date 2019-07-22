@@ -21,12 +21,15 @@ class TodoTextInput extends React.Component {
   handleChange = e => this.setState({ text: e.target.value })
 
   handleSubmit = e => {
-    console.log(e.which)
+    // console.log(e.which)
     if (e.which === 13) {
       const { onSave, isNewTodo } = this.props
       const text = e.target.value.trim()
       onSave(text)
-      if (isNewTodo) this.setState({ text: '' })
+      if (isNewTodo) {
+        this.setState({ text: '' })
+        console.log(this.state.text)
+      }
     }
   }
 
