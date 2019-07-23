@@ -18,7 +18,12 @@ import {
 // localStorage.setItem('todos', JSON.stringify(mockInitialState))
 
 const getTodos = () => {
-  return JSON.parse(localStorage.getItem('todos'))
+  const todos = localStorage.getItem('todos')
+  if (todos == null) {
+    return []
+  } else {
+    return JSON.parse(todos)
+  }
 }
 
 const saveTodos = (todos) => {
@@ -28,7 +33,7 @@ const saveTodos = (todos) => {
 
 const initialState = getTodos()
 
-console.log(initialState);
+// console.log(initialState);
 
 export default function todos(state = initialState, action) {
   switch (action.type) {

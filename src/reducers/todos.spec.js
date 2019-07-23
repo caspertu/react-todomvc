@@ -6,11 +6,11 @@ describe('todos reducer', () => {
     expect(
       todos(undefined, {})
     ).toEqual([
-      {
-        text: 'Use Redux',
-        completed: false,
-        id: 0
-      }
+      // {
+      //   text: 'Use Redux',
+      //   completed: false,
+      //   id: 0
+      // }
     ])
   })
 

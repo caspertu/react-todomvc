@@ -28,7 +28,7 @@ class TodoTextInput extends React.Component {
       onSave(text)
       if (isNewTodo) {
         this.setState({ text: '' })
-        console.log(this.state.text)
+        // console.log(this.state.text)
       }
     }
   }

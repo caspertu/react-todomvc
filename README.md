@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Todo MVC
+
+## 特性
+
+- 新增
+- 列表
+- 统计数量
+- 三种过滤器：所有, 待办, 已完成
+- 删除
+- 标记所有任务已完成
+- 使用LocalStorage实现本地存储
+- 单元测试
 
 ## Available Scripts
 
